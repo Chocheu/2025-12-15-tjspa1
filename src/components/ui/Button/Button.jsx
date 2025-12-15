@@ -1,7 +1,7 @@
 import React from "react";
 import style from "./Button.module.css";
 
-const Button = ({ title, onButtonClick, bgColor }) => {
+const Button = ({ title, onButtonClick, bgColor, children }) => {
   console.log(style);
   return (
     <button
@@ -11,7 +11,7 @@ const Button = ({ title, onButtonClick, bgColor }) => {
         onButtonClick("Nananère !");
       }}
     >
-      {title}
+      {title ?? children}
     </button>
   );
 };

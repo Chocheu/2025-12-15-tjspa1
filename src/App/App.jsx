@@ -6,25 +6,38 @@ function App() {
       Demat Breizh
       <br />
       <Button
-        title={"clique moi !"}
         bgColor="tomato"
         onButtonClick={(param) => {
           console.log("J'ai cliqué !", param);
         }}
-      />
+      >
+        OK ?
+      </Button>
+      
       <Button
-        title="ok"
+        children={"Luke"}
+        onButtonClick={(param) => {
+          console.log("Je suis tonn père !", param);
+        }}
+      />
+
+      <Button
         bgColor="aquamarine"
         onButtonClick={(param) => {
           console.log("C'est OKAY !", param);
         }}
-      />
+      >
+        <div>dac</div>
+      </Button>
+
       <Button
-        title="cancel"
         onButtonClick={(param) => {
-          console.log("CANCELED !", param);
+          console.log("CANCEL KULTURE !", param);
         }}
-      />
+      >
+        <div>la réponse est :</div>
+        <div>42</div>
+      </Button>
     </div>
   );
 }
