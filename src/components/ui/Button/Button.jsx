@@ -1,11 +1,11 @@
 import React from "react";
-import './Button.css';
+import style from "./Button.module.css";
 
 const Button = ({ title, onButtonClick }) => {
-  console.log(title);
+  console.log(style);
   return (
     <button
-      className="Button"
+      className={style.Button}
       onClick={(event) => {
         onButtonClick("Nanère !");
       }}
