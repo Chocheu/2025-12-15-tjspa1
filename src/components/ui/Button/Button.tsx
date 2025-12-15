@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import style from "./Button.module.css";
 
 interface IButtonProps {
@@ -14,18 +14,25 @@ const Button = ({
   type = "button",
   onButtonClick,
 }: IButtonProps) => {
+  const [isClicked, setIsClicked] = useState(false);
+  useEffect(() => {
+    console.log('button is totally cliked !', isClicked);
+  }, [isClicked])
+
   return (
     <button
       className={style.Button}
       type={type}
       style={{ backgroundColor: bgColor }}
       onClick={() => {
+        setIsClicked(true);
         if (onButtonClick) {
           onButtonClick();
         }
       }}
     >
-      {children}
+      {children}<br/>
+      {isClicked.toString()}
     </button>
   );
 };
