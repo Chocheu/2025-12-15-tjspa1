@@ -5,8 +5,18 @@ function App() {
     <div>
       Demat Breizh
       <br />
-      <Button title={"11"} bgcolor="tomato" color="white"></Button>
-      <Button title="ok" bgcolor="tomato" color="green"></Button>
+      <Button
+        title={"clique moi !"}
+        onButtonClick={(param) => {
+          console.log("J'ai cliqué !", param);
+        }}
+      />
+      <Button
+        title="ok"
+        onButtonClick={(param) => {
+          console.log("C'est OKAY !", param);
+        }}
+      />
     </div>
   );
 }
