@@ -5,7 +5,7 @@ function App() {
     <div>
       Demat Breizh
       <br />
-      <Button title="cancel" bgcolor="tomato" color="white"></Button>
+      <Button title={"11"} bgcolor="tomato" color="white"></Button>
       <Button title="ok" bgcolor="tomato" color="green"></Button>
     </div>
   );
