@@ -7,32 +7,32 @@ function App() {
       <br />
       <Button
         bgColor="tomato"
-        onButtonClick={(param) => {
-          console.log("J'ai cliqué !", param);
+        onButtonClick={() => {
+          console.log("Annie?");
         }}
       >
-        OK ?
+        Are you okay?
       </Button>
       <Button
         children={"Luke"}
-        onButtonClick={(param) => {
-          console.log("Je suis tonn père !", param);
+        onButtonClick={() => {
+          console.log("Je suis tonn père !");
         }}
       />
       <Button
         bgColor="aquamarine"
-        onButtonClick={(param) => {
-          console.log("C'est OKAY !", param);
+        onButtonClick={() => {
+          console.log("In space");
         }}
       >
         <div>dac</div>
       </Button>
       <Button
-        onButtonClick={(param) => {
-          console.log("CANCEL KULTURE !", param);
+        onButtonClick={() => {
+          console.log("CANCEL KULTURE !");
         }}
       >
-        <div>la réponse est :</div>
+        <div>la réponse est</div>
         <div>42</div>
       </Button>
     </div>
