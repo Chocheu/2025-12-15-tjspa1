@@ -10,11 +10,10 @@ interface IButtonProps {
 
 const Button = ({
   children,
-  bgColor = "yellowgreen",
+  bgColor = "yellow",
   type = "button",
   onButtonClick,
 }: IButtonProps) => {
-  console.log(style);
   return (
     <button
       className={style.Button}
