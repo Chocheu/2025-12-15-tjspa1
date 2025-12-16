@@ -3,23 +3,19 @@ import styles from "./FlexV1Grow.module.css";
 
 interface IFlexV1GrowProps {
   children?: React.ReactNode;
-}
-interface IFlexV1GrowState {
-  value?: undefined;
+  parentStyle?: React.CSSProperties;
 }
 
 const FlexV1Grow: React.FC<IFlexV1GrowProps> = ({
   children = "FlexV1Grow Component",
+  parentStyle,
 }) => {
-  const [state, setState] = useState<IFlexV1GrowState>({});
-  useEffect(() => {
-
-    return () => {
-    };
-  }, []);
-
   return (
-    <div className={styles.FlexV1Grow} data-testid="FlexV1Grow">
+    <div
+      className={styles.FlexV1Grow}
+      style={parentStyle}
+      data-testid="FlexV1Grow"
+    >
       {children}
     </div>
   );
