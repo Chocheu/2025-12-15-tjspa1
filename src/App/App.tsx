@@ -11,6 +11,7 @@ import { REST_API_URL, REST_API_RESOURCES } from "../config/constantes";
 type TImage = Array<ImageInterface>;
 
 const App: React.FC = () => {
+  const [current, setCurrent] = useState(emptyMeme);
   const [images, setImages] = useState<TImage>([]);
   useEffect(() => {
     fetch(`${REST_API_URL}${REST_API_RESOURCES.images}`)
@@ -27,11 +28,17 @@ const App: React.FC = () => {
           <Navbar></Navbar>
           <FlexV1Grow>
             <MemeSVGViewer
-              meme={emptyMeme}
-              image={undefined}
+              image={images.find((item) => item.id === current.imageId)}
+              meme={current}
               basePath=""
             ></MemeSVGViewer>
-            <MemeForm images={images}></MemeForm>
+            <MemeForm
+              images={images}
+              meme={current}
+              onMemeChange={(meme) => {
+                setCurrent(meme);
+              }}
+            ></MemeForm>
           </FlexV1Grow>
           <Footer></Footer>
         </FlexH3Grow>
