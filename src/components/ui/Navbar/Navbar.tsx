@@ -1,26 +1,20 @@
-import React, { useEffect, useState } from "react";
 import styles from "./Navbar.module.css";
+import { Container, Nav, Navbar as NavBar } from "react-bootstrap";
+import "bootstrap/dist/css/bootstrap.css";
 
-interface INavbarProps {
-  children?: React.ReactNode;
-}
-interface INavbarState {
-  value?: undefined;
-}
-
-const Navbar: React.FC<INavbarProps> = ({
-  children = "Navbar Component",
-}) => {
-  const [state, setState] = useState<INavbarState>({});
-  useEffect(() => {
-
-    return () => {
-    };
-  }, []);
-
+const Navbar: React.FC = () => {
   return (
     <div className={styles.Navbar} data-testid="Navbar">
-      {children}
+      <NavBar bg="dark" data-bs-theme="dark">
+        <Container>
+          <NavBar.Brand href="#home">Home</NavBar.Brand>
+          <Nav className="me-auto">
+            <Nav.Link href="#home">Thumbnail</Nav.Link>
+            <Nav.Link href="#features">New</Nav.Link>
+            <Nav.Link href="#pricing">Edit</Nav.Link>
+          </Nav>
+        </Container>
+      </NavBar>
     </div>
   );
 };
