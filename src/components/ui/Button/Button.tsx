@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import style from "./Button.module.css";
 
 interface IButtonProps {
-  children: string | React.ReactElement | Array<string | React.ReactElement>;
+  children: React.ReactNode | Array<React.ReactNode>; // React.ReactNode replace string + ReactElement
   onButtonClick?: () => void;
   bgColor?: string;
   type?: "button" | "submit" | "reset";
@@ -16,12 +16,14 @@ const Button = ({
 }: IButtonProps) => {
   const [isClicked, setIsClicked] = useState(false);
   useEffect(() => {
-    console.log('button is totally cliked !', isClicked);
-  }, [isClicked])
+    setTimeout(() => {
+      setIsClicked(false);
+    }, 200);
+  }, [isClicked]);
 
   return (
     <button
-      className={style.Button}
+      className={`${style.Button}${isClicked ? ` ${style.clicked}` : ""}`}
       type={type}
       style={{ backgroundColor: bgColor }}
       onClick={() => {
@@ -31,8 +33,7 @@ const Button = ({
         }
       }}
     >
-      {children}<br/>
-      {isClicked.toString()}
+      {children}
     </button>
   );
 };

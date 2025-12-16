@@ -1,12 +1,13 @@
 import { useEffect, useState } from "react";
 import Button from "../components/ui/Button/Button";
 
-const App: React.FC<undefined> = () => {
+const App: React.FC = () => {
   const [counter, setCounter] = useState(0);
   useEffect(() => {
     // componentDidMount
-    console.log("did mount");
+    // console.log("did mount");
     // setCounter(0); // inutile mais pour l'exemple => useState(0) à la place
+    
     // componentDidUpdate
     console.log("counter effect", counter);
 
