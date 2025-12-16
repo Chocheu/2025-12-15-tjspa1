@@ -8,7 +8,7 @@ import Navbar from "../components/ui/Navbar/Navbar";
 
 const App: React.FC = () => {
   return (
-    <div style={{ textAlign: "center" }}>
+    <div className="App">
       <FlexH3Grow>
         <Header></Header>
         <Navbar></Navbar>
