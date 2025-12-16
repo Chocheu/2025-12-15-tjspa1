@@ -6,20 +6,21 @@ import Footer from "../components/ui/Footer/Footer";
 import Header from "../components/ui/Header/Header";
 import Navbar from "../components/ui/Navbar/Navbar";
 import React, { useEffect, useState } from "react";
+import { REST_API_URL, REST_API_RESOURCES } from "../config/constantes";
 
 type TImage = Array<ImageInterface>;
 
 const App: React.FC = () => {
   const [images, setImages] = useState<TImage>([]);
   useEffect(() => {
-    fetch("http://localhost:5629/images")
+    fetch(`${REST_API_URL}${REST_API_RESOURCES.images}`)
       .then((r) => r.json())
       .then((imgs) => setImages(imgs));
   }, []);
 
   return (
     <React.Fragment>
-      <div>images : {JSON.stringify(images)}</div>
+      {/* <div>images : {JSON.stringify(images)}</div> */}
       <div className="App">
         <FlexH3Grow>
           <Header></Header>
@@ -30,7 +31,7 @@ const App: React.FC = () => {
               image={undefined}
               basePath=""
             ></MemeSVGViewer>
-            <MemeForm></MemeForm>
+            <MemeForm images={images}></MemeForm>
           </FlexV1Grow>
           <Footer></Footer>
         </FlexH3Grow>
