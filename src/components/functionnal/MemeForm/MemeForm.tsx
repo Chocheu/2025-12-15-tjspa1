@@ -1,6 +1,6 @@
 import styles from "./MemeForm.module.css";
 import type { ImageInterface, MemeInterface } from "orsys-tjs-meme";
-import Button from "../../ui/Button/Button";
+// import Button from "../../ui/Button/Button";
 // import { useState } from "react";
 
 interface IMemeFormProps {
