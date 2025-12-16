@@ -1,26 +1,12 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import styles from "./Header.module.css";
 
-interface IHeaderProps {
-  children?: React.ReactNode;
-}
-interface IHeaderState {
-  value?: undefined;
-}
-
-const Header: React.FC<IHeaderProps> = ({
-  children = "Header Component",
-}) => {
-  const [state, setState] = useState<IHeaderState>({});
-  useEffect(() => {
-
-    return () => {
-    };
-  }, []);
-
+const Header: React.FC = () => {
   return (
     <div className={styles.Header} data-testid="Header">
-      {children}
+      <span className={styles.meme}>
+        Meme<span className={styles.dot}>.</span><span className={styles.react}>react</span>
+      </span>
     </div>
   );
 };
