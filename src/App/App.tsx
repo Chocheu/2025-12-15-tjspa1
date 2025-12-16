@@ -21,7 +21,6 @@ const App: React.FC = () => {
 
   return (
     <React.Fragment>
-      {/* <div>images : {JSON.stringify(images)}</div> */}
       <div className="App">
         <FlexH3Grow>
           <Header></Header>

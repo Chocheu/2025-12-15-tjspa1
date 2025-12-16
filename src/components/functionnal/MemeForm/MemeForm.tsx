@@ -135,7 +135,7 @@ const MemeForm: React.FC<IMemeFormProps> = ({ images, meme, onMemeChange }) => {
           min="100"
           step="100"
           max="900"
-          value={meme.text}
+          value={meme.fontWeight}
           onChange={onStringChange}
         />
         <br />
