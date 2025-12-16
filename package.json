@@ -8,10 +8,10 @@
     "build": "tsc -b && vite build",
     "lint": "eslint .",
     "preview": "vite preview",
-    "component": "npx generate-rect-cli c",
-    "component:ui": "npx generate-rect-cli c --type=ui",
-    "component:layout": "npx generate-rect-cli c --type=layout",
-    "component:functionnal": "npx generate-rect-cli c --type=functionnal"
+    "component": "npx generate-react-cli c",
+    "component:ui": "npx generate-react-cli c --type=ui",
+    "component:layout": "npx generate-react-cli c --type=layout",
+    "component:functionnal": "npx generate-react-cli c --type=functionnal"
   },
   "dependencies": {
     "react": "^19.2.0",
