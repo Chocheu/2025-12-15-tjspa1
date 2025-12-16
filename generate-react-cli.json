@@ -11,7 +11,7 @@
       "withTest": true,
       "withStory": true,
       "withLazy": true,
-      "customTemplate": {
+      "customTemplates": {
         "component": "components-templates/generic-function-hook/TemplateName.tsx",
         "test": "components-templates/TemplateName.test.tsx",
         "lazy": "components-templates/TemplateName.lazy.tsx"
@@ -23,7 +23,7 @@
       "withTest": true,
       "withStory": true,
       "withLazy": true,
-      "customTemplate": {
+      "customTemplates": {
         "component": "components-templates/generic-function-hook/TemplateName.tsx",
         "test": "components-templates/TemplateName.test.tsx",
         "lazy": "components-templates/TemplateName.lazy.tsx"
@@ -35,7 +35,7 @@
       "withTest": true,
       "withStory": true,
       "withLazy": true,
-      "customTemplate": {
+      "customTemplates": {
         "component": "components-templates/generic-function-hook/TemplateName.tsx",
         "test": "components-templates/TemplateName.test.tsx",
         "lazy": "components-templates/TemplateName.lazy.tsx"
@@ -47,7 +47,7 @@
       "withTest": true,
       "withStory": true,
       "withLazy": true,
-      "customTemplate": {
+      "customTemplates": {
         "component": "components-templates/generic-function-hook/TemplateName.tsx",
         "test": "components-templates/TemplateName.test.tsx",
         "lazy": "components-templates/TemplateName.lazy.tsx"
