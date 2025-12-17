@@ -1,7 +1,8 @@
+import Button from "../../ui/Button/Button";
 import type { IMemeFormProps } from "./MemeForm.interface";
 import styles from "./MemeForm.module.css";
 
-const MemeForm: React.FC<IMemeFormProps> = ({ images, meme, onMemeChange }) => {
+const MemeForm: React.FC<IMemeFormProps> = ({ images, meme, onMemeChange, onMemeSave }) => {
   const onNumberChange = (
     evt: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>
   ) => {
@@ -21,6 +22,7 @@ const MemeForm: React.FC<IMemeFormProps> = ({ images, meme, onMemeChange }) => {
       <form
         onSubmit={(evt) => {
           evt.preventDefault();
+          onMemeSave(meme);
         }}
       >
         <label htmlFor="titre">
@@ -154,6 +156,7 @@ const MemeForm: React.FC<IMemeFormProps> = ({ images, meme, onMemeChange }) => {
         />
         <hr />
         <br />
+        <Button type="submit">Save</Button>
       </form>
     </div>
   );
