@@ -9,5 +9,5 @@ export const store = configureStore({
 store.subscribe(() => console.log(store.getState()));
 store.dispatch(loadRessources());
 
-export type RootState = ReturnType<typeof store.getState>;
-export type AppDispatch = typeof store.dispatch;
+export type StoreState = ReturnType<typeof store.getState>;
+export type StoreDispatch = typeof store.dispatch;
