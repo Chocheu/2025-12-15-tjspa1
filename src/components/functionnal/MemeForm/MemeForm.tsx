@@ -1,7 +1,5 @@
 import styles from "./MemeForm.module.css";
 import type { ImageInterface, MemeInterface } from "orsys-tjs-meme";
-// import Button from "../../ui/Button/Button";
-// import { useState } from "react";
 
 interface IMemeFormProps {
   images: Array<ImageInterface>;
@@ -10,8 +8,6 @@ interface IMemeFormProps {
 }
 
 const MemeForm: React.FC<IMemeFormProps> = ({ images, meme, onMemeChange }) => {
-  // const [current, setCurrent] = useState(meme); // use if we use submit button
-
   const onNumberChange = (
     evt: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>
   ) => {
@@ -164,7 +160,6 @@ const MemeForm: React.FC<IMemeFormProps> = ({ images, meme, onMemeChange }) => {
         />
         <hr />
         <br />
-        {/* <Button type="submit">Save</Button> */}
       </form>
     </div>
   );
