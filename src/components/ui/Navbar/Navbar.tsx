@@ -22,6 +22,15 @@ const Navbar: React.FC = () => {
             <Link className="nav-link" to="/editor/1">
               EdiThor 1
             </Link>
+            <Link className="nav-link" to="/editor/3">
+              EdiThor 3
+            </Link>
+            <Link className="nav-link" to="/editor/123">
+              EdiThor 123
+            </Link>
+            <Link className="nav-link" to="/editor/1A">
+              EdiThor 1A
+            </Link>
           </Nav>
         </Container>
       </NavBar>
