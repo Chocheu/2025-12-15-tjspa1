@@ -54,16 +54,16 @@
     },
     {
       "id": 1,
-      "titre": "Long wait",
-      "text": "Long wait",
+      "titre": "Long waiting in the dark",
+      "text": "Long wait in the dark",
       "x": 100,
-      "y": 20,
+      "y": 100,
       "fontWeight": "900",
       "fontSize": 100,
       "underline": true,
       "italic": false,
       "imageId": 3,
-      "color": "#000000",
+      "color": "#00ffee",
       "frameSizeX": 0,
       "frameSizeY": 0
     },
@@ -291,6 +291,21 @@
       "frameSizeX": 0,
       "frameSizeY": 0,
       "id": 20
+    },
+    {
+      "titre": "DUH",
+      "text": "DUH !",
+      "x": 600,
+      "y": 120,
+      "fontWeight": "500",
+      "fontSize": 100,
+      "underline": false,
+      "italic": false,
+      "imageId": 1,
+      "color": "#00ffe1",
+      "frameSizeX": 0,
+      "frameSizeY": 0,
+      "id": 21
     }
   ]
 }
