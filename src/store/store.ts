@@ -9,6 +9,10 @@ export const store = configureStore({
   },
 });
 
+// type state and dispatch
+export type StoreState = ReturnType<typeof store.getState>;
+export type StoreDispatch = typeof store.dispatch;
+
 store.subscribe(() => {
   console.log(store.getState());
 });
