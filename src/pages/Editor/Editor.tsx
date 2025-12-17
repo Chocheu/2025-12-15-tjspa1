@@ -1,5 +1,21 @@
+import FlexV1Grow from "../../components/layout/FlexV1Grow/FlexV1Grow";
+import MemeForm from "../../components/functionnal/MemeForm/MemeForm.store";
+import MemeSvgViewer from "../../components/ui/MemeSvgViewer/MemeSvgViewer.store";
+import { useParams } from "react-router";
+import { useEffect } from "react";
+
 const Editor: React.FC = () => {
-  return <></>;
+  const param = useParams();
+  useEffect(() => {
+    console.log(param);
+  }, [param]);
+  
+  return (
+    <FlexV1Grow>
+      <MemeSvgViewer basePath="" />
+      <MemeForm />
+    </FlexV1Grow>
+  );
 };
 
 export default Editor;

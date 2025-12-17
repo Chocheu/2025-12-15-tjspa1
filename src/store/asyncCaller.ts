@@ -15,6 +15,7 @@ export const loadRessources = createAsyncThunk("ressources/load", async () => {
     memes: await responseAll[1].json(),
   };
 });
+
 export const saveCurrent: AsyncThunk<
   MemeInterface,
   MemeInterface,

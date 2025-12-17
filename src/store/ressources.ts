@@ -1,6 +1,6 @@
 import { createSlice } from "@reduxjs/toolkit";
 import type { ImageInterface, MemeInterface } from "orsys-tjs-meme";
-import { loadRessources, saveCurrent } from "./asyncCaller";
+import { loadRessources } from "./asyncCaller";
 interface IRessourcesState {
   memes: Array<MemeInterface>;
   images: Array<ImageInterface>;

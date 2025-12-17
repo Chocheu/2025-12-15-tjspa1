@@ -1,11 +1,11 @@
-import MemeForm from "../components/functionnal/MemeForm/MemeForm.store";
+import { Route, Routes } from 'react-router';
 import FlexH3Grow from "../components/layout/FlexH3Grow/FlexH3Grow";
-import FlexV1Grow from "../components/layout/FlexV1Grow/FlexV1Grow";
 import Footer from "../components/ui/Footer/Footer";
 import Header from "../components/ui/Header/Header";
 import Navbar from "../components/ui/Navbar/Navbar";
 import "../store/store";
-import MemeSvgViewer from "../components/ui/MemeSvgViewer/MemeSvgViewer.store";
+import Editor from '../pages/Editor/Editor';
+import Home from '../pages/Home/Home';
 
 const App: React.FC = () => {
   return (
@@ -14,10 +14,11 @@ const App: React.FC = () => {
         <FlexH3Grow>
           <Header/>
           <Navbar/>
-          <FlexV1Grow>
-            <MemeSvgViewer basePath=""/>
-            <MemeForm />
-          </FlexV1Grow>
+          <Routes>
+            <Route path="/" Component={Home}></Route>
+            <Route path="/editor" Component={Editor}></Route>
+            <Route path="/editor/:id" Component={Editor}></Route>
+          </Routes>
           <Footer />
         </FlexH3Grow>
       </div>
