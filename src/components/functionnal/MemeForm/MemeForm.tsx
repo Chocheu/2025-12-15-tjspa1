@@ -1,11 +1,5 @@
+import type { IMemeFormProps } from "./MemeForm.interface";
 import styles from "./MemeForm.module.css";
-import type { ImageInterface, MemeInterface } from "orsys-tjs-meme";
-
-interface IMemeFormProps {
-  images: Array<ImageInterface>;
-  meme: MemeInterface;
-  onMemeChange: (meme:MemeInterface)=>void;
-}
 
 const MemeForm: React.FC<IMemeFormProps> = ({ images, meme, onMemeChange }) => {
   const onNumberChange = (
