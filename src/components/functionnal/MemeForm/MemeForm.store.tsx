@@ -4,6 +4,7 @@ import type { IMemeFormStored } from "./MemeForm.interface";
 import { useDispatch, useSelector } from "react-redux";
 import { type StoreDispatch, type StoreState } from "../../../store/store";
 import { update } from "../../../store/current";
+import { saveCurrent } from "../../../store/asyncCaller";
 
 const MemeForm: React.FC<IMemeFormStored> = (props) => {
   const images = useSelector((state: StoreState) => state.ressources.images);
@@ -17,6 +18,9 @@ const MemeForm: React.FC<IMemeFormStored> = (props) => {
       meme={current}
       onMemeChange={(meme) => {
         dispatch(update(meme));
+      }}
+      onMemeSave={(meme) => {
+        dispatch(saveCurrent(meme));
       }}
     ></StandAloneMemeForm>
   );
