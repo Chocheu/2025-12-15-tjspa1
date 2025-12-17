@@ -2,7 +2,7 @@ import { useSelector } from "react-redux";
 import MemeThumbnail from "../../components/layout/MemeThumbnail/MemeThumbnail";
 import type { StoreState } from "../../store/store";
 import { Link } from "react-router";
-import { MemeSVGThumbnail, MemeSVGViewer } from "orsys-tjs-meme";
+import { MemeSVGViewer } from "orsys-tjs-meme";
 
 const Thumbnail: React.FC = () => {
   const ressources = useSelector((state: StoreState) => state.ressources);
