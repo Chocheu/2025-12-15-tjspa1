@@ -6,6 +6,7 @@ import Navbar from "../components/ui/Navbar/Navbar";
 import "../store/store";
 import Editor from '../pages/Editor/Editor';
 import Home from '../pages/Home/Home';
+import Thumbnail from '../pages/Thumbnail/Thumbnail';
 
 const App: React.FC = () => {
   return (
@@ -18,6 +19,7 @@ const App: React.FC = () => {
             <Route path="/" Component={Home}></Route>
             <Route path="/editor" Component={Editor}></Route>
             <Route path="/editor/:id" Component={Editor}></Route>
+            <Route path="/thumbnail" Component={Thumbnail}></Route>
           </Routes>
           <Footer />
         </FlexH3Grow>
